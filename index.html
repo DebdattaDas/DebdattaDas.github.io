@@ -4,22 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Debdatta Das - Team Lead & Full Stack Web Developer. Explore my portfolio showcasing skills, work experience, projects, and more.">
-    <meta property="og:title" content="Debdatta Das - Portfolio">
-    <meta property="og:description" content="Explore the portfolio of Debdatta Das, a skilled Full Stack Web Developer with expertise in modern technologies.">
-    <meta property="og:image" content="path/to/your/profile-image.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
     <title>Debdatta Das - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
-        /* Modern CSS using Flexbox and Grid */
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #1f1c2c, #928DAB);
             color: #ffffff;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
 
         .navbar {
@@ -54,13 +50,6 @@
             background-size: cover;
             background-position: center;
             padding: 0 15px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
         }
 
         .header-section h1 {
@@ -136,7 +125,8 @@
         .about-section p,
         .skills-section p,
         .work-section p,
-        .project-section p {
+        .project-section p,
+        .testimonials-section p {
             font-size: 1.2rem;
             color: #dcdcdc;
             line-height: 1.8;
@@ -152,7 +142,9 @@
 
         .skills-section i,
         .work-section i,
-        .project-section i {
+        .project-section i,
+        .testimonials-section i,
+        .blog-section i {
             font-size: 3rem;
             color: #f0a500;
             margin-bottom: 15px;
@@ -160,7 +152,9 @@
 
         .skills-section .col-md-4,
         .work-section .col-lg-8,
-        .project-section .col-lg-8 {
+        .project-section .col-lg-8,
+        .testimonials-section .col-md-6,
+        .blog-section .col-md-4 {
             margin-bottom: 30px;
         }
 
@@ -181,27 +175,34 @@
             color: #ffffff;
         }
 
-        .work-section ul {
-            list-style-type: none;
-            padding: 0;
-            font-size: 1.2rem;
-            color: #dcdcdc;
+        .work-section {
+            padding: 80px 15px;
+            background-color: #1f1f1f;
         }
 
-        .work-section ul li {
-            margin-bottom: 10px;
-            line-height: 1.6;
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .work-section h3 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #f0a500;
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            padding: 20px;
+            background: #2c2c2c;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
-        .work-section p {
-            font-size: 1.1rem;
-            color: #dcdcdc;
+        .timeline-item:hover {
+            background-color: #3e3e3e;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-content {
+            padding: 20px;
         }
 
         .project-box {
@@ -229,72 +230,56 @@
             font-size: 1.2rem;
         }
 
-        /* Additional styles for new sections */
-        .timeline {
-            position: relative;
-            padding: 20px 0;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding: 10px 0;
-            margin-bottom: 30px;
-            border-left: 2px solid #f0a500;
-        }
-
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background-color: #f0a500;
-            border-radius: 50%;
-        }
-
-        .testimonials-section,
-        .blog-section {
-            background-color: #121212;
-        }
-
-        .testimonial-item,
-        .blog-item {
+        .testimonial-item {
             background-color: #2c2c2c;
-            border-radius: 10px;
+            border-radius: 8px;
             padding: 20px;
             margin-bottom: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-item:hover {
+            background-color: #3e3e3e;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         .testimonial-item p {
             color: #dcdcdc;
             font-size: 1.2rem;
-            margin-bottom: 10px;
         }
 
         .blog-item {
-            color: #dcdcdc;
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-item:hover {
+            background-color: #3e3e3e;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         .blog-item h3 {
             font-size: 1.8rem;
             color: #f0a500;
-            margin-bottom: 10px;
-        }
-
-        .blog-item p {
-            font-size: 1.2rem;
             margin-bottom: 15px;
         }
 
-        .blog-item a {
-            color: #f0a500;
-            text-decoration: none;
+        .blog-item p {
+            color: #dcdcdc;
+            font-size: 1.2rem;
         }
 
-        .blog-item a:hover {
-            text-decoration: underline;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #f0a500;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -314,6 +299,8 @@
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#work">Work Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -343,17 +330,17 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up">
                     <i class="fas fa-code"></i>
                     <h3>Languages & Frameworks</h3>
                     <p>C# (ASP.NET), Node.js, C/C++, HTML/HTML5, CSS</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-database"></i>
                     <h3>Databases</h3>
                     <p>SQL Server Management Studio (SSMS)</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-users"></i>
                     <h3>Soft Skills</h3>
                     <p>Leadership, Teamwork, Communication, Problem Solving</p>
@@ -366,22 +353,26 @@
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Isourse Technologies Pvt. Ltd. | Team Lead</h3>
-                    <p><em>March 2024 – Present</em></p>
-                    <ul>
-                        <li>Leading a dynamic team to drive innovation and efficiency in software development.</li>
-                        <li>Applying agile methodologies to manage projects and ensure timely delivery.</li>
-                        <li>Providing support and guidance to team members to maintain high morale and productivity.</li>
-                    </ul>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-content">
+                        <h3>Isourse Technologies Pvt. Ltd. | Team Lead</h3>
+                        <p><em>March 2024 – Present</em></p>
+                        <ul>
+                            <li>Leading a dynamic team to drive innovation and efficiency in software development.</li>
+                            <li>Applying agile methodologies to manage projects and ensure timely delivery.</li>
+                            <li>Providing support and guidance to team members to maintain high morale and productivity.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h3>Isourse Technologies Pvt. Ltd. | Software Engineer</h3>
-                    <p><em>August 2021 – February 2024</em></p>
-                    <ul>
-                        <li>Successfully completed projects within tight deadlines using effective time management techniques.</li>
-                        <li>Demonstrated leadership in team settings, providing support and guidance to maintain team spirit.</li>
-                    </ul>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-content">
+                        <h3>Isourse Technologies Pvt. Ltd. | Software Engineer</h3>
+                        <p><em>August 2021 – February 2024</em></p>
+                        <ul>
+                            <li>Successfully completed projects within tight deadlines using effective time management techniques.</li>
+                            <li>Demonstrated leadership in team settings, providing support and guidance to maintain team spirit.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -391,13 +382,13 @@
         <div class="container">
             <h2 class="section-title">Selected Project Contributions</h2>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up">
                     <div class="project-box">
                         <h3>HRMS</h3>
                         <p>A comprehensive computerized system that automates a range of HR processes, from onboarding to offboarding. This solution eliminates paper-based documentation, enhances efficiency, and includes advanced features such as attendance management, payroll processing, task management, and predictive data analysis for tracking employee performance.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-box">
                         <h3>HYPERLOCAL</h3>
                         <p>An efficient system designed to streamline the delivery process with features such as store and rider onboarding, electronic background verification (e-BGV), geofencing, and order management. It allows businesses to quickly onboard new stores and riders, verify their backgrounds, and manage orders with ease.</p>
@@ -411,16 +402,16 @@
         <div class="container">
             <h2 class="section-title">Testimonials</h2>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-up">
                     <div class="testimonial-item">
-                        <p>"Debdatta is an exceptional leader and developer who brings a high level of expertise and dedication to every project. His ability to drive innovation and foster a collaborative environment is truly impressive."</p>
-                        <p><strong>John Doe</strong>, CTO at Tech Company</p>
+                        <p>"Debdatta has been a tremendous asset to our team. His expertise in software development and his leadership skills have driven our projects to success."</p>
+                        <p><strong>John Doe</strong>, CTO at Isourse Technologies Pvt. Ltd.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial-item">
-                        <p>"Working with Debdatta has been a game-changer for our team. His technical skills and problem-solving capabilities have made a significant impact on our projects. Highly recommend!"</p>
-                        <p><strong>Jane Smith</strong>, Project Manager at Tech Solutions</p>
+                        <p>"Working with Debdatta was a pleasure. His problem-solving abilities and dedication are unmatched, making him a valuable team member."</p>
+                        <p><strong>Jane Smith</strong>, Project Manager at Isourse Technologies Pvt. Ltd.</p>
                     </div>
                 </div>
             </div>
@@ -429,46 +420,43 @@
 
     <section id="blog" class="blog-section">
         <div class="container">
-            <h2 class="section-title">Latest Blog Posts</h2>
+            <h2 class="section-title">Blog</h2>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4" data-aos="fade-up">
                     <div class="blog-item">
-                        <h3>Understanding Modern Web Development Trends</h3>
-                        <p>Explore the latest trends in web development and how they are shaping the future of technology. From new frameworks to innovative practices, stay ahead of the curve.</p>
-                        <a href="#">Read More</a>
+                        <h3>Understanding Full Stack Development</h3>
+                        <p>An overview of what it means to be a full stack developer, the skills required, and the benefits of having a holistic understanding of both frontend and backend technologies.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="blog-item">
-                        <h3>How to Enhance Your Web Security</h3>
-                        <p>Learn essential tips and practices to improve the security of your web applications. Understand common vulnerabilities and how to protect your site from potential threats.</p>
-                        <a href="#">Read More</a>
+                        <h3>Best Practices for Agile Development</h3>
+                        <p>Exploring best practices for agile development, including tips for effective sprint planning, team collaboration, and adapting to change.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-item">
+                        <h3>Enhancing User Experience with CSS</h3>
+                        <p>Techniques and tips for improving user experience through effective use of CSS, including responsive design and modern CSS features.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <section id="contact" class="footer">
         <div class="container">
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:dasdebdatta4@gmail.com">dasdebdatta4@gmail.com</a></p>
             <p>Phone: <a href="tel:+918800768701">+91 88007 68701</a></p>
             <p><a href="https://www.linkedin.com/in/debdattadas/" target="_blank">View My LinkedIn Profile</a></p>
         </div>
-    </footer>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        // Example of a basic service worker registration for PWA
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then(function(registration) {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                }).catch(function(error) {
-                    console.log('Service Worker registration failed:', error);
-                });
-        }
+        AOS.init();
     </script>
 </body>
 
