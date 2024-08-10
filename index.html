@@ -44,7 +44,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, #0f2027, #2c5364);
+            background-image: url('path/to/your/background-image.jpg');
+            background-size: cover;
+            background-position: center;
             padding: 0 15px;
         }
 
@@ -63,11 +65,12 @@
 
         .button-group {
             display: flex;
-            justify-content: center;
             gap: 15px;
+            justify-content: center;
         }
 
-        .btn-custom, .btn-download {
+        .btn-custom,
+        .btn-download {
             font-size: 1.1rem;
             padding: 10px 20px;
             border-radius: 30px;
@@ -183,6 +186,32 @@
             font-size: 1.1rem;
             color: #dcdcdc;
         }
+
+        .card {
+            background-color: #1f1f1f;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #f0a500;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #dcdcdc;
+        }
     </style>
 </head>
 
@@ -274,11 +303,26 @@
     <section id="projects" class="project-section">
         <div class="container">
             <h2 class="section-title">Selected Project Contributions</h2>
-            <h3>HRMS</h3>
-            <p>A comprehensive computerized system that automates a range of HR processes, from onboarding to offboarding. This solution eliminates paper-based documentation, enhances efficiency, and includes advanced features such as attendance management, payroll processing, task management, and predictive data analysis for tracking employee performance.</p>
-
-            <h3>HYPERLOCAL</h3>
-            <p>An efficient system designed to streamline the delivery process with features such as store and rider onboarding, electronic background verification (e-BGV), geofencing, and order management. It allows businesses to quickly onboard new stores and riders, verify their backgrounds, and manage orders with ease.</p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card mb-4">
+                        <img src="path/to/hrms-image.jpg" class="card-img-top" alt="HRMS">
+                        <div class="card-body">
+                            <h5 class="card-title">HRMS</h5>
+                            <p class="card-text">A comprehensive computerized system that automates a range of HR processes, from onboarding to offboarding. This solution eliminates paper-based documentation, enhances efficiency, and includes advanced features such as attendance management, payroll processing, task management, and predictive data analysis for tracking employee performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card mb-4">
+                        <img src="path/to/hyperlocal-image.jpg" class="card-img-top" alt="HYPERLOCAL">
+                        <div class="card-body">
+                            <h5 class="card-title">HYPERLOCAL</h5>
+                            <p class="card-text">An efficient system designed to streamline the delivery process with features such as store and rider onboarding, electronic background verification (e-BGV), geofencing, and order management. It allows businesses to quickly onboard new stores and riders, verify their backgrounds, and manage orders with ease.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -286,7 +330,7 @@
         <div class="container">
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:dasdebdatta4@gmail.com">dasdebdatta4@gmail.com</a></p>
-            <p>Phone: <a href="tel:+918800768708">+91 88007 68701</a></p>
+            <p>Phone: <a href="tel:+918800768701">+91 88007 68701</a></p>
             <p><a href="https://www.linkedin.com/in/debdattadas/" target="_blank">View My LinkedIn Profile</a></p>
         </div>
     </section>
