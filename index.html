@@ -19,8 +19,12 @@
         }
 
         .navbar {
-            background-color: transparent;
+            background-color: #121212;
             padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         .navbar-brand {
@@ -77,12 +81,12 @@
             padding: 10px 20px;
             border-radius: 30px;
             text-transform: uppercase;
+            border: none;
         }
 
         .btn-custom {
             background-color: #f0a500;
             color: #121212;
-            border: none;
         }
 
         .btn-custom:hover {
@@ -140,22 +144,38 @@
             background-color: #1f1f1f;
         }
 
-        .skills-section i,
-        .work-section i,
-        .project-section i,
-        .testimonials-section i,
-        .blog-section i {
+        .skills-section .col-md-4 {
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-section .col-md-4:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .skills-section i {
             font-size: 3rem;
+            color: #f0a500;
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+
+        .skills-section i:hover {
+            color: #ffffff;
+        }
+
+        .skills-section h3 {
+            font-size: 1.8rem;
             color: #f0a500;
             margin-bottom: 15px;
         }
 
-        .skills-section .col-md-4,
-        .work-section .col-lg-8,
-        .project-section .col-lg-8,
-        .testimonials-section .col-md-6,
-        .blog-section .col-md-4 {
-            margin-bottom: 30px;
+        .skills-section p {
+            color: #dcdcdc;
+            font-size: 1.2rem;
         }
 
         .footer {
@@ -286,44 +306,45 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Debdatta Das</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#work">Work Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <header class="header-section">
-        <div class="container text-center">
-            <img src="path/to/your/profile-image.jpg" alt="Debdatta Das" class="profile-img">
-            <h1>Debdatta Das</h1>
-            <p>Team Lead & Full Stack Web Developer</p>
-            <div class="button-group">
-                <a href="#about" class="btn btn-custom">Learn More</a>
-                <a href="https://drive.google.com/file/d/1zlSvRfisQcgW7VHFEPVGkg5J3NpH7KtL/view" target="_blank" class="btn btn-download" download>Download Resume</a>
-                <!-- <a href="https://debdattadas.github.io/DebdattaDas_Resume.pdf" target="_blank" class="btn btn-download" download>Download Resume</a> -->
-            </div>
+        <img src="path/to/profile-image.jpg" alt="Debdatta Das" class="profile-img">
+        <h1>Debdatta Das</h1>
+        <p>Team Lead & Full Stack Web Developer</p>
+        <div class="button-group">
+            <a href="#about" class="btn btn-custom">Learn More</a>
+            <a href="https://drive.google.com/file/d/1zlSvRfisQcgW7VHFEPVGkg5J3NpH7KtL/view" class="btn btn-download" target="_blank">Download Resume</a>
         </div>
     </header>
 
     <section id="about" class="about-section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <p>A dedicated Full Stack Web Developer specializing in .NET Web Forms with SSMS technology, and a proficient Backend Developer in Node.js with SSMS. Driven by a passion for continuous learning and growth, I am adept at tackling new challenges in software development with a proactive approach and strong problem-solving skills. Committed to leveraging my knowledge and experience to deliver high-quality solutions and achieve excellence. On a journey to transform from "GOOD" to "THE BEST" with unwavering determination and maximum potential.</p>
+            <p>A dedicated Full Stack Web Developer specializing in .NET Web Forms with SSMS technology, and a proficient Backend Developer in Node.js with SSMS. Driven by a passion for continuous learning and growth, I am adept at tackling new challenges in software development with a proactive approach and strong problem-solving skills. Committed to leveraging my knowledge and experience to deliver high-quality solutions and achieve excellence. On a journey to transform from 'GOOD' to 'THE BEST' with unwavering determination and maximum potential.</p>
         </div>
     </section>
 
@@ -398,52 +419,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">Testimonials</h2>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-up">
-                    <div class="testimonial-item">
-                        <p>"Debdatta has been a tremendous asset to our team. His expertise in software development and his leadership skills have driven our projects to success."</p>
-                        <p><strong>John Doe</strong>, CTO at Isourse Technologies Pvt. Ltd.</p>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-item">
-                        <p>"Working with Debdatta was a pleasure. His problem-solving abilities and dedication are unmatched, making him a valuable team member."</p>
-                        <p><strong>Jane Smith</strong>, Project Manager at Isourse Technologies Pvt. Ltd.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <h2 class="section-title">Blog</h2>
-            <div class="row">
-                <div class="col-md-4" data-aos="fade-up">
-                    <div class="blog-item">
-                        <h3>Understanding Full Stack Development</h3>
-                        <p>An overview of what it means to be a full stack developer, the skills required, and the benefits of having a holistic understanding of both frontend and backend technologies.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-item">
-                        <h3>Best Practices for Agile Development</h3>
-                        <p>Exploring best practices for agile development, including tips for effective sprint planning, team collaboration, and adapting to change.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-item">
-                        <h3>Enhancing User Experience with CSS</h3>
-                        <p>Techniques and tips for improving user experience through effective use of CSS, including responsive design and modern CSS features.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="contact" class="footer">
         <div class="container">
