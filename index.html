@@ -61,14 +61,23 @@
             margin-bottom: 30px;
         }
 
-        .btn-custom {
-            background-color: #f0a500;
-            color: #121212;
-            border: none;
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-custom, .btn-download {
             font-size: 1.1rem;
             padding: 10px 20px;
             border-radius: 30px;
             text-transform: uppercase;
+        }
+
+        .btn-custom {
+            background-color: #f0a500;
+            color: #121212;
+            border: none;
         }
 
         .btn-custom:hover {
@@ -80,11 +89,6 @@
             background-color: #121212;
             color: #f0a500;
             border: 2px solid #f0a500;
-            font-size: 1.1rem;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-transform: uppercase;
-            margin-top: 20px;
         }
 
         .btn-download:hover {
@@ -204,11 +208,13 @@
     </nav>
 
     <header class="header-section">
-        <div class="container">
+        <div class="container text-center">
             <h1>Debdatta Das</h1>
             <p>Team Lead & Full Stack Web Developer</p>
-            <a href="#about" class="btn btn-custom">Learn More</a>
-            <a href="https://drive.google.com/file/d/1zlSvRfisQcgW7VHFEPVGkg5J3NpH7KtL/view" target="_blank" class="btn btn-download" download>Download Resume</a>
+            <div class="button-group">
+                <a href="#about" class="btn btn-custom">Learn More</a>
+                <a href="https://drive.google.com/file/d/1zlSvRfisQcgW7VHFEPVGkg5J3NpH7KtL/view" target="_blank" class="btn btn-download" download>Download Resume</a>
+            </div>
         </div>
     </header>
 
