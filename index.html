@@ -18,7 +18,7 @@
 
         .navbar {
             background-color: transparent;
-            padding-top: 20px;
+            padding: 20px 0;
         }
 
         .navbar-brand {
@@ -44,75 +44,89 @@
             justify-content: center;
             text-align: center;
             background: linear-gradient(135deg, #0f2027, #2c5364);
+            padding: 0 15px;
         }
 
         .header-section h1 {
             font-size: 4rem;
             font-weight: bold;
             color: #f0a500;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .header-section p {
             font-size: 1.8rem;
             color: #ffffff;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn-custom {
+            background-color: #f0a500;
+            color: #121212;
+            border: none;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+
+        .btn-custom:hover {
+            background-color: #ffffff;
+            color: #121212;
+        }
+
+        .about-section,
+        .skills-section,
+        .work-section,
+        .project-section {
+            padding: 80px 15px;
+            text-align: center;
         }
 
         .about-section {
-            padding: 100px 0;
             background-color: #121212;
-            text-align: center;
         }
 
         .section-title {
             font-size: 2.8rem;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             font-weight: bold;
             color: #f0a500;
         }
 
-        .about-section p {
-            font-size: 1.4rem;
-            max-width: 800px;
-            margin: 0 auto;
+        .about-section p,
+        .skills-section p,
+        .work-section p,
+        .project-section p {
+            font-size: 1.2rem;
+            color: #dcdcdc;
             line-height: 1.8;
         }
 
         .skills-section,
         .work-section,
         .project-section {
-            padding: 100px 0;
             background-color: #1f1f1f;
-            text-align: center;
+        }
+
+        .skills-section i,
+        .work-section i,
+        .project-section i {
+            font-size: 3rem;
+            color: #f0a500;
+            margin-bottom: 15px;
         }
 
         .skills-section .col-md-4,
         .work-section .col-lg-8,
         .project-section .col-lg-8 {
-            margin-bottom: 40px;
-        }
-
-        .skills-section h3,
-        .work-section h3,
-        .project-section h3 {
-            color: #f0a500;
-            font-weight: bold;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .skills-section p,
-        .work-section p,
-        .project-section p {
-            font-size: 1.2rem;
-            color: #dcdcdc;
+            margin-bottom: 30px;
         }
 
         .footer {
             background-color: #0d0d0d;
             color: #ffffff;
-            padding: 30px 0;
+            padding: 30px 15px;
             text-align: center;
         }
 
@@ -124,28 +138,6 @@
 
         .footer a:hover {
             color: #ffffff;
-        }
-
-        .fa {
-            color: #f0a500;
-            margin-bottom: 15px;
-            font-size: 3rem;
-        }
-
-        .btn-custom {
-            background-color: #f0a500;
-            color: #121212;
-            border: none;
-            font-size: 1.1rem;
-            padding: 10px 20px;
-            border-radius: 30px;
-            margin-top: 30px;
-            text-transform: uppercase;
-        }
-
-        .btn-custom:hover {
-            background-color: #ffffff;
-            color: #121212;
         }
     </style>
 </head>
@@ -243,8 +235,8 @@
     <section id="contact" class="footer">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:das.debdatta@example.com">das.debdatta@example.com</a></p>
-            <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+            <p>Email: <a href="mailto:dasdebdatta4@gmail.com">dasdebdatta4@gmail.com</a></p>
+            <p>Phone: <a href="tel:+918800768708">+91 88007 68701</a></p>
             <p><a href="https://www.linkedin.com/in/debdattadas/" target="_blank">View My LinkedIn Profile</a></p>
         </div>
     </section>
