@@ -333,6 +333,45 @@
             color: #f0a500;
             text-decoration: underline;
         }
+
+        .project-section {
+            background-color: #1f1f1f;
+            padding: 80px 15px;
+        }
+
+        .project-box {
+            background-color: #2c2c2c;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            height: 100%;
+        }
+
+        .project-box:hover {
+            background-color: #3e3e3e;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .project-box h3 {
+            font-size: 1.8rem;
+            color: #f0a500;
+            margin-bottom: 15px;
+        }
+
+        .project-box p {
+            color: #dcdcdc;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-box p strong {
+            color: #f0a500;
+        }
+
+        
+        
     </style>
 </head>
 
@@ -475,21 +514,33 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="project-section">
-        <div class="container">
-            <h2 class="section-title">Selected Project Contributions</h2>
-            <div class="row">
-                <div class="col-md-6 project-box" data-aos="fade-up">
+<section id="projects" class="project-section">
+    <div class="container">
+        <h2 class="section-title">Selected Project Contributions</h2>
+        <div class="row">
+            <!-- HRMS Project -->
+            <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <div class="project-box">
                     <h3>HRMS</h3>
+                    <p><strong>Technologies Used:</strong> C# (.NET) Web Forms, SQL Server</p>
                     <p>A comprehensive computerized system that automates a range of HR processes from onboarding to offboarding, eliminating the need for paper-based documentation and enhancing efficiency. Key features include attendance management, payroll processing, and task management. Additionally, the system incorporates a predictive data analysis model, enabling HR personnel to track employee performance and manage HR-related tasks effectively.</p>
+                    <p><strong>Challenges:</strong> Integrated various HR functions into a unified system.</p>
+                    <p><strong>Solutions:</strong> Designed modular components and implemented robust data processing.</p>
                 </div>
-                <div class="col-md-6 project-box" data-aos="fade-up" data-aos-delay="100">
+            </div>
+            <!-- HYPERLOCAL Project -->
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-box">
                     <h3>HYPERLOCAL</h3>
+                    <p><strong>Technologies Used:</strong> C# (.NET) Web Forms, SQL Server</p>
                     <p>A system designed for fast and efficient store and rider onboarding, incorporating electronic background verification (e-BGV). The onboarding modules enable businesses to quickly integrate new stores and riders, while e-BGV simplifies the background check process for riders and employees, ensuring reliability and safety.</p>
+                    <p><strong>Challenges:</strong> Streamlined the onboarding process and ensured secure background verification.</p>
+                    <p><strong>Solutions:</strong> Implemented a scalable architecture and integrated secure verification protocols.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
 <section id="contact" class="footer">
