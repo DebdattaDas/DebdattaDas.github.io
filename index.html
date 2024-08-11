@@ -205,6 +205,7 @@
             position: relative;
             max-width: 900px;
             margin: 0 auto;
+            padding: 0 15px;
         }
 
         .timeline-item {
@@ -222,8 +223,51 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        .timeline-content {
-            padding: 20px;
+        .timeline-content h3 {
+            font-size: 1.8rem;
+            color: #f0a500;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            color: #dcdcdc;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: #dcdcdc;
+            font-size: 1.2rem;
+        }
+
+        .timeline-content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .timeline-item {
+                padding: 15px;
+            }
+
+            .timeline-content h3 {
+                font-size: 1.6rem;
+            }
+
+            .timeline-content p {
+                font-size: 1.1rem;
+            }
+
+            .timeline-content ul {
+                font-size: 1.1rem;
+            }
+
+            .timeline-content ul li {
+                margin-bottom: 8px;
+            }
         }
 
         .project-box {
@@ -508,24 +552,29 @@
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
             <div class="timeline">
+                <!-- Team Lead Role -->
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
                         <h3>Isourse Technologies Pvt. Ltd. | Team Lead</h3>
                         <p><strong>March 2024 – Present</strong></p>
                         <ul>
                             <li>Leading a dynamic team to drive innovation and efficiency in software development.</li>
-                            <li>Applying agile methodologies to manage projects and ensure timely delivery.</li>
-                            <li>Providing support and guidance to team members to maintain high morale and productivity.</li>
+                            <li>Implementing agile methodologies to streamline project management and ensure timely delivery.</li>
+                            <li>Providing mentorship and support to team members to foster professional growth and maintain high productivity.</li>
+                            <li>Coordinating cross-functional teams to align project goals with company objectives.</li>
                         </ul>
                     </div>
                 </div>
+                <!-- Software Engineer Role -->
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="timeline-content">
                         <h3>Isourse Technologies Pvt. Ltd. | Software Engineer</h3>
                         <p><strong>August 2021 – February 2024</strong></p>
                         <ul>
-                            <li>Successfully completed projects within tight deadlines using effective time management techniques.</li>
-                            <li>Demonstrated leadership in team settings, providing support and guidance to maintain team spirit.</li>
+                            <li>Designed and developed scalable web applications using C# (.NET) and SQL Server Management Studio (SSMS).</li>
+                            <li>Successfully completed projects within tight deadlines, employing effective time management techniques.</li>
+                            <li>Collaborated with team members to resolve technical issues and enhance software functionality.</li>
+                            <li>Provided technical guidance and support to junior developers and team members.</li>
                         </ul>
                     </div>
                 </div>
@@ -534,66 +583,66 @@
     </section>
 
     <!-- Projects Section -->
-<section id="projects" class="project-section">
-    <div class="container">
-        <h2 class="section-title">Selected Project Contributions</h2>
-        <div class="row">
-            <!-- HRMS Project -->
-            <div class="col-lg-6 mb-4" data-aos="fade-up">
-                <div class="project-box">
-                    <h3>HRMS</h3>
-                    <p><strong>Technologies Used:</strong> C# (.NET) Web Forms, SQL Server</p>
-                    <p>A comprehensive computerized system that automates a range of HR processes from onboarding to offboarding, eliminating the need for paper-based documentation and enhancing efficiency. Key features include attendance management, payroll processing, and task management. Additionally, the system incorporates a predictive data analysis model, enabling HR personnel to track employee performance and manage HR-related tasks effectively.</p>
-                    <p><strong>Challenges:</strong> Integrated various HR functions into a unified system.</p>
-                    <p><strong>Solutions:</strong> Designed modular components and implemented robust data processing.</p>
+    <section id="projects" class="project-section">
+        <div class="container">
+            <h2 class="section-title">Selected Project Contributions</h2>
+            <div class="row">
+                <!-- HRMS Project -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                    <div class="project-box">
+                        <h3>HRMS</h3>
+                        <p><strong>Technologies Used:</strong> C# (.NET) Web Forms, SQL Server</p>
+                        <p>A comprehensive computerized system that automates a range of HR processes from onboarding to offboarding, eliminating the need for paper-based documentation and enhancing efficiency. Key features include attendance management, payroll processing, and task management. Additionally, the system incorporates a predictive data analysis model, enabling HR personnel to track employee performance and manage HR-related tasks effectively.</p>
+                        <p><strong>Challenges:</strong> Integrated various HR functions into a unified system.</p>
+                        <p><strong>Solutions:</strong> Designed modular components and implemented robust data processing.</p>
+                    </div>
                 </div>
-            </div>
-            <!-- HYPERLOCAL Project -->
-            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-box">
-                    <h3>HYPERLOCAL</h3>
-                    <p><strong>Technologies Used:</strong> C# (.NET) Web Forms, SQL Server</p>
-                    <p>A system designed for fast and efficient store and rider onboarding, incorporating electronic background verification (e-BGV). The onboarding modules enable businesses to quickly integrate new stores and riders, while e-BGV simplifies the background check process for riders and employees, ensuring reliability and safety.</p>
-                    <p><strong>Challenges:</strong> Streamlined the onboarding process and ensured secure background verification.</p>
-                    <p><strong>Solutions:</strong> Implemented a scalable architecture and integrated secure verification protocols.</p>
+                <!-- HYPERLOCAL Project -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-box">
+                        <h3>HYPERLOCAL</h3>
+                        <p><strong>Technologies Used:</strong> C# (.NET) Web Forms, SQL Server</p>
+                        <p>A system designed for fast and efficient store and rider onboarding, incorporating electronic background verification (e-BGV). The onboarding modules enable businesses to quickly integrate new stores and riders, while e-BGV simplifies the background check process for riders and employees, ensuring reliability and safety.</p>
+                        <p><strong>Challenges:</strong> Streamlined the onboarding process and ensured secure background verification.</p>
+                        <p><strong>Solutions:</strong> Implemented a scalable architecture and integrated secure verification protocols.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Contact Section -->
-<section id="contact" class="footer">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 contact-item" data-aos="fade-up">
-                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                <p><a href="mailto:dasdebdatta4@gmail.com">dasdebdatta4@gmail.com</a></p>
+    <section id="contact" class="footer">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 contact-item" data-aos="fade-up">
+                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                    <p><a href="mailto:dasdebdatta4@gmail.com">dasdebdatta4@gmail.com</a></p>
+                </div>
+                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                    <p><a href="tel:+918800768701">+91 88007 68701</a></p>
+                </div>
+                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-brands fa-linkedin fa-2x" aria-hidden="true"></i>
+                    <p><a href="https://www.linkedin.com/in/debdattadas/" target="_blank" aria-label="View My LinkedIn Profile">View My LinkedIn Profile</a></p>
+                </div>
+                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-brands fa-x fa-2x" aria-hidden="true"></i>
+                    <p><a href="https://x.com/das_debdatta28" target="_blank" aria-label="Follow me on X">Follow me on X</a></p>
+                </div>
+                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-brands fa-github fa-2x" aria-hidden="true"></i>
+                    <p><a href="https://github.com/DebdattaDas" target="_blank" aria-label="View my GitHub Profile">View my GitHub Profile</a></p>
+                </div>
+                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-brands fa-instagram fa-2x" aria-hidden="true"></i>
+                    <p><a href="https://www.instagram.com/das_debdatta28/" target="_blank" aria-label="Follow on Instagram">Follow on Instagram</a></p>
+                </div>            
             </div>
-            <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="100">
-                <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                <p><a href="tel:+918800768701">+91 88007 68701</a></p>
-            </div>
-            <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="200">
-                <i class="fa-brands fa-linkedin fa-2x" aria-hidden="true"></i>
-                <p><a href="https://www.linkedin.com/in/debdattadas/" target="_blank" aria-label="View My LinkedIn Profile">View My LinkedIn Profile</a></p>
-            </div>
-            <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="300">
-                <i class="fa-brands fa-x fa-2x" aria-hidden="true"></i>
-                <p><a href="https://x.com/das_debdatta28" target="_blank" aria-label="Follow me on X">Follow me on X</a></p>
-            </div>
-            <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="400">
-                <i class="fa-brands fa-github fa-2x" aria-hidden="true"></i>
-                <p><a href="https://github.com/DebdattaDas" target="_blank" aria-label="View my GitHub Profile">View my GitHub Profile</a></p>
-            </div>
-            <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="500">
-                <i class="fa-brands fa-instagram fa-2x" aria-hidden="true"></i>
-                <p><a href="https://www.instagram.com/das_debdatta28/" target="_blank" aria-label="Follow on Instagram">Follow on Instagram</a></p>
-            </div>            
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
