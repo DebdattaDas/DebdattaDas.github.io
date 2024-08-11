@@ -57,6 +57,11 @@
             padding: 0 15px;
         }
 
+        .header-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
         .header-section h1 {
             font-size: 4rem;
             font-weight: bold;
@@ -104,6 +109,28 @@
         .btn-download:hover {
             background-color: #f0a500;
             color: #121212;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .header-section p {
+                font-size: 1.4rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-custom,
+            .btn-download {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
         }
 
         .about-section,
@@ -449,16 +476,18 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="header-section">
-        <img src="DebdattaDas_PortfolioPic.JPG" alt="Debdatta Das" class="profile-img">
+<!-- Header Section -->
+<header class="header-section">
+    <div class="container text-center">
+        <img src="DebdattaDas_PortfolioPic.JPG" alt="Debdatta Das" class="profile-img mb-3">
         <h1>Debdatta Das</h1>
-        <p>Team Lead & Full Stack Web Developer</p>
+        <p class="mb-4">Team Lead & Full Stack Web Developer</p>
         <div class="button-group">
             <a href="#about" class="btn btn-custom">Learn More</a>
             <a href="https://drive.google.com/file/d/1zlSvRfisQcgW7VHFEPVGkg5J3NpH7KtL/view" target="_blank" class="btn btn-download" download>Download Resume</a>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- About Section -->
     <section id="about" class="about-section">
