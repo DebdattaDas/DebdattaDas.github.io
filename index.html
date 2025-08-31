@@ -3,682 +3,460 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Debdatta Das, Module Lead & Full Stack .NET Developer specializing in C#, SQL, Oracle, Node.js, and scalable enterprise solutions.">
+    <meta name="keywords"
+        content="Debdatta Das, Full Stack Developer, .NET, C#, SQL, Node.js, Oracle, Portfolio, Web Developer, Module Lead, Sopra Steria">
+    <meta name="author" content="Debdatta Das">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Debdatta Das - Portfolio">
+    <meta property="og:description"
+        content="Explore the portfolio of Debdatta Das, Full Stack .NET Developer with expertise in scalable enterprise solutions.">
+    <meta property="og:image" content="assets/images/DebdattaDas_PortfolioPic.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://debdattadas.github.io/">
     <title>Debdatta Das - Portfolio</title>
+    <link rel="preload" as="image" href="assets/images/DebdattaDas_PortfolioPic.webp">
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" as="script">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1f1c2c, #928DAB);
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://debdattadas.github.io/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        .navbar {
-            background-color: #121212;
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar-brand {
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 1.8rem;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ffffff;
-            margin-right: 15px;
-            font-size: 1.1rem;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #f0a500;
-        }
-
-        .header-section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background-image: url('path/to/your/background-image.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 0 15px;
-        }
-
-        .header-section .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .header-section h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            color: #f0a500;
-            margin-bottom: 20px;
-        }
-
-        .header-section p {
-            font-size: 1.8rem;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .btn-custom,
-        .btn-download {
-            font-size: 1.1rem;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-transform: uppercase;
-            border: none;
-        }
-
-        .btn-custom {
-            background-color: #f0a500;
-            color: #121212;
-        }
-
-        .btn-custom:hover {
-            background-color: #ffffff;
-            color: #121212;
-        }
-
-        .btn-download {
-            background-color: #121212;
-            color: #f0a500;
-            border: 2px solid #f0a500;
-        }
-
-        .btn-download:hover {
-            background-color: #f0a500;
-            color: #121212;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .header-section h1 {
-                font-size: 2.5rem;
-            }
-
-            .header-section p {
-                font-size: 1.4rem;
-            }
-
-            .button-group {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .btn-custom,
-            .btn-download {
-                font-size: 1rem;
-                padding: 8px 16px;
-            }
-        }
-
-        .about-section,
-        .skills-section,
-        .work-section,
-        .project-section,
-        .testimonials-section,
-        .blog-section {
-            padding: 80px 15px;
-            text-align: center;
-        }
-
-        .about-section {
-            background-color: #121212;
-        }
-
-        .section-title {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-            font-weight: bold;
-            color: #f0a500;
-        }
-
-        .about-section p,
-        .skills-section p,
-        .work-section p,
-        .project-section p,
-        .testimonials-section p {
-            font-size: 1.2rem;
-            color: #dcdcdc;
-            line-height: 1.8;
-        }
-
-        .skills-section,
-        .work-section,
-        .project-section,
-        .testimonials-section,
-        .blog-section {
-            background-color: #1f1f1f;
-        }
-
-        .skills-section .col-md-4 {
-            transition: transform 0.3s, box-shadow 0.3s;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .skills-section .col-md-4:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .skills-section i {
-            font-size: 3rem;
-            color: #f0a500;
-            margin-bottom: 15px;
-            transition: color 0.3s;
-        }
-
-        .skills-section i:hover {
-            color: #ffffff;
-        }
-
-        .skills-section h3 {
-            font-size: 1.8rem;
-            color: #f0a500;
-            margin-bottom: 15px;
-        }
-
-        .skills-section p {
-            color: #dcdcdc;
-            font-size: 1.2rem;
-        }
-
-        .footer {
-            background-color: #0d0d0d;
-            color: #ffffff;
-            padding: 30px 15px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #f0a500;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        .footer a:hover {
-            color: #ffffff;
-        }
-
-        .work-section {
-            padding: 80px 15px;
-            background-color: #1f1f1f;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin: 20px 0;
-            padding: 20px;
-            background: #2c2c2c;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .timeline-item:hover {
-            background-color: #3e3e3e;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .timeline-content h3 {
-            font-size: 1.8rem;
-            color: #f0a500;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content p {
-            color: #dcdcdc;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            margin-right: 20px;
-            color: #dcdcdc;
-            font-size: 1.2rem;
-        }
-
-        .timeline-content ul li {
-            margin-bottom: 10px;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .timeline-item {
-                padding: 15px;
-            }
-
-            .timeline-content h3 {
-                font-size: 1.6rem;
-            }
-
-            .timeline-content p {
-                font-size: 1.1rem;
-            }
-
-            .timeline-content ul {
-                font-size: 1.1rem;
-            }
-
-            .timeline-content ul li {
-                margin-bottom: 8px;
-            }
-        }
-
-        .project-box {
-            background-color: #2c2c2c;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .project-box:hover {
-            background-color: #3e3e3e;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .project-box h3 {
-            font-size: 1.8rem;
-            color: #f0a500;
-            margin-bottom: 15px;
-        }
-
-        .project-box p {
-            color: #dcdcdc;
-            font-size: 1.2rem;
-        }
-
-        .testimonial-item {
-            background-color: #2c2c2c;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .testimonial-item:hover {
-            background-color: #3e3e3e;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .testimonial-item p {
-            color: #dcdcdc;
-            font-size: 1.2rem;
-        }
-
-        .blog-item {
-            background-color: #2c2c2c;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .blog-item:hover {
-            background-color: #3e3e3e;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .blog-item h3 {
-            font-size: 1.8rem;
-            color: #f0a500;
-            margin-bottom: 15px;
-        }
-
-        .blog-item p {
-            color: #dcdcdc;
-            font-size: 1.2rem;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid #f0a500;
-            margin-bottom: 20px;
-        }
-
-        /* Ensure that the navbar expands correctly on smaller screens */
-        @media (max-width: 992px) {
-            .navbar-nav {
-                text-align: center;
-            }
-
-            .navbar-nav .nav-item {
-                margin: 10px 0;
-            }
-        }
-        .contact-item {
-        text-align: center;
-        margin-bottom: 20px;
-        }
-
-        .contact-item i {
-            color: #f0a500;
-            margin-bottom: 10px;
-        }
-
-        .contact-item p a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        .contact-item p a:hover {
-            color: #f0a500;
-            text-decoration: underline;
-        }
-
-        .project-section {
-            background-color: #1f1f1f;
-            padding: 80px 15px;
-        }
-
-        .project-box {
-            background-color: #2c2c2c;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-            height: 100%;
-        }
-
-        .project-box:hover {
-            background-color: #3e3e3e;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-            transform: translateY(-5px);
-        }
-
-        .project-box h3 {
-            font-size: 1.8rem;
-            color: #f0a500;
-            margin-bottom: 15px;
-        }
-
-        .project-box p {
-            color: #dcdcdc;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .project-box p strong {
-            color: #f0a500;
-        }
-
-        
-        
-    </style>
 </head>
 
-<body>
+<body id="top">
+    <a href="#main-content" class="skip-to-content">Skip to Content</a>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Main Navigation">
         <div class="container">
             <a class="navbar-brand" href="#">Debdatta Das</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" aria-label="Navigate to About Section">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills" aria-label="Navigate to Skills Section">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#work">Work Experience</a>
+                        <a class="nav-link" href="#work" aria-label="Navigate to Work Experience Section">Work
+                            Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects" aria-label="Navigate to Projects Section">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" aria-label="Navigate to Contact Section">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<!-- Header Section -->
-<header class="header-section">
-    <div class="container text-center">
-        <img src="DebdattaDas_PortfolioPic.JPG" alt="Debdatta Das" class="profile-img mb-3">
-        <h1>Debdatta Das</h1>
-        <p class="mb-4">Team Lead & Full Stack Web Developer</p>
-        <div class="button-group">
-            <a href="#about" class="btn btn-custom">Learn More</a>
-            <a href="https://drive.google.com/file/d/19I76LGEjjmwoAQ7H6Q2nSjOEcbkWkk7a/view" target="_blank" class="btn btn-download" download>Download Resume</a>
-        </div>
-    </div>
-</header>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p>I am a dedicated Full Stack Web Developer specializing in .NET Web Forms with SSMS technology, and proficient in Backend development using Node.js. My passion for continuous learning drives me to excel in software development, where I approach challenges with a proactive mindset and strong problem-solving skills. I am committed to delivering high-quality solutions by leveraging my expertise and experience. My journey is one of constant growth, aiming to transition from 'GOOD' to 'THE BEST' with determination and maximum effort.</p>
-        </div>
-    </section>    
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">Core Technical Skills</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <i class="fa fa-code"></i>
-                    <h3>C# (.NET)</h3>
-                    <p>Proficient in developing scalable web applications using ASP.NET, with a strong focus on coding practices and performance optimization.</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fa fa-server"></i>
-                    <h3>Node.js</h3>
-                    <p>Experienced in server-side development with Node.js, specializing in designing and implementing RESTful APIs.</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fa fa-database"></i>
-                    <h3>SQL Server Management Studio (SSMS)</h3>
-                    <p>Adept at database management and crafting complex SQL queries using SQL Server Management Studio (SSMS).</p>
-                </div>
-            </div>
-        
-            <!-- Add Soft Skills Section Here -->
-            <h2 class="section-title mt-5">Soft Skills</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Leadership</h3>
-                    <p>Guiding and inspiring teams to achieve goals, managing projects, and making strategic decisions effectively.</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-users-cog"></i>
-                    <h3>Team Management</h3>
-                    <p>Leading, organizing, and motivating teams to achieve project goals, providing support and feedback.</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Problem Solving & Adaptability</h3>
-                    <p>Analyzing issues and developing innovative solutions to technical challenges while responding to changes in requirements or technology with flexibility and quickly learning new skills.</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Interpersonal Skills</h3>
-                    <p>Building and maintaining positive relationships with team members, clients, and stakeholders through empathy and active listening.</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="700">
-                    <i class="fas fa-people-arrows"></i>
-                    <h3>Conflict Management</h3>
-                    <p>Handling disagreements constructively, negotiating solutions, and maintaining a positive work environment.</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
-                    <i class="fas fa-clock"></i>
-                    <h3>Time Management</h3>
-                    <p>Organizing and prioritizing tasks to meet deadlines and manage multiple responsibilities efficiently.</p>
-                </div>
-            </div>
-
-            <!-- Languages Section -->
-            <h2 class="section-title mt-5">Languages</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="900">
-                    <i class="fas fa-language"></i>
-                    <h3>Bengali</h3>
-                    <p>Mother Tongue</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1000">
-                    <i class="fas fa-language"></i>
-                    <h3>Hindi</h3>
-                    <p>Fluent</p>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
-                    <i class="fas fa-language"></i>
-                    <h3>English</h3>
-                    <p>Fluent</p>
-                </div>
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container text-center">
+            <img src="assets/images/DebdattaDas_PortfolioPic.webp" alt="Profile picture of Debdatta Das"
+                class="profile-img mb-3 fade-in" loading="lazy" role="img">
+            <h1 class="fade-in" style="animation-delay: 0.2s;">Debdatta Das</h1>
+            <p class="mb-4 fade-in" style="animation-delay: 0.4s;" id="typewriter">
+                <!-- Module Lead & Full Stack .NET Developer | C#, SQL, Oracle, Node.js -->
+            </p>
+            <div class="button-group fade-in" style="animation-delay: 0.6s;">
+                <a href="#projects" class="btn btn-custom" aria-label="View my projects section">Explore My Work</a>
+                <a href="assets/resume/Debdatta_Das_Resume.pdf" target="_blank" class="btn btn-download"
+                    aria-label="Download my resume in PDF format" download>Download Resume</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Work Experience Section -->
-    <section id="work" class="work-section">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <!-- Team Lead Role -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-content">
-                        <h3>Isourse Technologies Pvt. Ltd. | Team Lead</h3>
-                        <p><strong>March 2024 – Present</strong></p>
-                        <ul>
-                            <li>Leading a dynamic team to drive innovation and efficiency in software development.</li>
-                            <li>Implementing agile methodologies to streamline project management and ensure timely delivery.</li>
-                            <li>Providing mentorship and support to team members to foster professional growth and maintain high productivity.</li>
-                            <li>Coordinating cross-functional teams to align project goals with company objectives.</li>
-                        </ul>
+    <main id="main-content">
+        <!-- About Section -->
+        <section id="about" class="about-section" data-aos="fade-up" aria-label="About Me Section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    I am a results-driven <strong>Module Lead & Full Stack .NET Developer</strong> with
+                    <strong>4+ years of experience</strong> in building scalable, high-performance web applications.
+                    Currently leading engineering efforts at <strong>Sopra Steria India Ltd.</strong>, I specialize in
+                    <strong>.NET (C#), MS SQL, Oracle DB, Node.js</strong>, and <strong>RESTful APIs</strong>.
+                </p>
+                <p>
+                    My expertise lies in <strong>architecting enterprise solutions</strong>, optimizing database
+                    performance, and
+                    driving <strong>CI/CD pipelines</strong> for efficient software delivery. As a leader, I mentor
+                    cross-functional teams to deliver solutions that meet both business and technical objectives.
+                </p>
+                <p>
+                    I believe in blending <strong>technical excellence</strong> with a growth mindset, ensuring that
+                    every
+                    project I lead
+                    reflects innovation, performance, and a seamless user experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section" aria-label="Skills Section">
+            <div class="container">
+                <!-- Core Technical Skills -->
+                <h2 class="section-title">Core Technical Skills</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="fade-up">
+                        <i class="fa fa-code"></i>
+                        <h3>C# (.NET Web Forms, MVC & Core)</h3>
+                        <p>Expertise in developing enterprise-grade web applications with a focus on scalability,
+                            security,
+                            and performance optimization.</p>
+                        <div class="skill-progress">
+                            <span style="width: 90%;"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa fa-database"></i>
+                        <h3>MS SQL & Oracle DB</h3>
+                        <p>Proficient in database design, query optimization, ETL processes, and performance tuning for
+                            high-traffic applications.</p>
+                        <div class="skill-progress">
+                            <span style="width:85%;"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa fa-server"></i>
+                        <h3>Node.js & RESTful APIs</h3>
+                        <p>Experienced in server-side development, designing and implementing RESTful APIs and
+                            microservices
+                            for seamless integrations.</p>
+                        <div class="skill-progress">
+                            <span style="width: 80%;"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Azure DevOps & CI/CD</h3>
+                        <p>Skilled in automating deployments with CI/CD pipelines, version control (Git), and
+                            cloud-based
+                            delivery using Azure DevOps.</p>
+                        <div class="skill-progress">
+                            <span style="width: 75%;"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-cubes"></i>
+                        <h3>Microservices Architecture</h3>
+                        <p>Designing modular and distributed architectures for scalable, maintainable, and
+                            high-performing
+                            applications.</p>
+                        <div class="skill-progress">
+                            <span style="width: 70%;"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-tools"></i>
+                        <h3>Other Tools</h3>
+                        <p>Hands-on experience with Visual Studio, VS Code, Git, and Postman for API testing and
+                            debugging.
+                        </p>
+                        <div class="skill-progress">
+                            <span style="width: 80%;"></span>
+                        </div>
                     </div>
                 </div>
-                <!-- Software Engineer Role -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-content">
-                        <h3>Isourse Technologies Pvt. Ltd. | Software Engineer</h3>
-                        <p><strong>August 2021 – February 2024</strong></p>
-                        <ul>
-                            <li>Designed and developed scalable web applications using C# (.NET) and SQL Server Management Studio (SSMS).</li>
-                            <li>Successfully completed projects within tight deadlines, employing effective time management techniques.</li>
-                            <li>Collaborated with team members to resolve technical issues and enhance software functionality.</li>
-                            <li>Provided technical guidance and support to junior developers and team members.</li>
-                        </ul>
+
+                <!-- Soft Skills -->
+                <h2 class="section-title mt-5">Soft Skills</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Leadership</h3>
+                        <p>Proven ability to guide and mentor teams, driving technical excellence and project success.
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-users-cog"></i>
+                        <h3>Team Management</h3>
+                        <p>Experienced in coordinating cross-functional teams, ensuring collaboration and alignment with
+                            business goals.</p>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Problem Solving</h3>
+                        <p>Strong analytical mindset with a track record of resolving complex challenges efficiently.
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="900">
+                        <i class="fas fa-clock"></i>
+                        <h3>Time Management</h3>
+                        <p>Expert in prioritizing tasks, meeting deadlines, and managing multiple responsibilities
+                            seamlessly.</p>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1000">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Interpersonal Skills</h3>
+                        <p>Skilled in building trust-based relationships with team members, clients, and stakeholders.
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
+                        <i class="fas fa-people-arrows"></i>
+                        <h3>Conflict Management</h3>
+                        <p>Capable of mediating conflicts, fostering a positive and productive team environment.</p>
+                    </div>
+                </div>
+
+                <!-- Languages Section -->
+                <h2 class="section-title mt-5">Languages</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="900">
+                        <i class="fas fa-language"></i>
+                        <h3>Bengali</h3>
+                        <p>Mother Tongue</p>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1000">
+                        <i class="fas fa-language"></i>
+                        <h3>Hindi</h3>
+                        <p>Fluent</p>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
+                        <i class="fas fa-language"></i>
+                        <h3>English</h3>
+                        <p>Fluent</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="project-section">
-        <div class="container">
-            <h2 class="section-title">Selected Project Contributions</h2>
-            <div class="row">
-                <!-- HRMS Project -->
-                <div class="col-lg-6 mb-4" data-aos="fade-up">
-                    <div class="project-box">
-                        <h3>HRMS</h3>
-                        <p><strong>Technologies Used:</strong> C# (.NET) Web Forms, SQL Server</p>
-                        <p>A comprehensive computerized system that automates a range of HR processes from onboarding to offboarding, eliminating the need for paper-based documentation and enhancing efficiency. Key features include attendance management, payroll processing, and task management. Additionally, the system incorporates a predictive data analysis model, enabling HR personnel to track employee performance and manage HR-related tasks effectively.</p>
-                        <p><strong>Challenges:</strong> Integrated various HR functions into a unified system.</p>
-                        <p><strong>Solutions:</strong> Designed modular components and implemented robust data processing.</p>
+        <!-- Work Experience Section -->
+        <section id="work" class="work-section" aria-label="Work Experience Section">
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="timeline">
+
+                    <!-- Module Lead Role -->
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="timeline-content">
+                            <h3>Sopra Steria India Ltd. | <span class="role">Module Lead</span></h3>
+                            <p class="date"><strong>May 2025 – Present</strong></p>
+                            <ul>
+                                <li>Leading enterprise-grade solutions using <strong>.NET, MS SQL, and Oracle
+                                        DB</strong>
+                                    with a
+                                    focus on scalability and performance.</li>
+                                <li>Driving <strong>CI/CD pipelines</strong> and DevOps initiatives to streamline
+                                    deployments.
+                                </li>
+                                <li>Collaborating with cross-functional teams to architect microservices-based
+                                    solutions.
+                                </li>
+                                <li>Providing mentorship and technical leadership to ensure quality coding practices.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <!-- Team Lead Role -->
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="timeline-content">
+                            <h3>Isourse Technologies Pvt. Ltd. | <span class="role">Team Lead</span></h3>
+                            <p class="date"><strong>March 2024 – April 2025</strong></p>
+                            <ul>
+                                <li>Led a team of 20 developers, implementing Agile (Scrum & Kanban) to improve delivery
+                                    speed
+                                    by 40%.</li>
+                                <li>Oversaw end-to-end project planning, architecture, and client interactions for key
+                                    product
+                                    deliveries.</li>
+                                <li>Implemented <strong>CI/CD pipelines</strong> that reduced release errors by 60% and
+                                    enhanced
+                                    delivery cycles.</li>
+                                <li>Conducted code reviews, performance evaluations, and mentoring sessions for junior
+                                    developers.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Software Engineer Role -->
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="timeline-content">
+                            <h3>Isourse Technologies Pvt. Ltd. | <span class="role">Software Engineer</span></h3>
+                            <p class="date"><strong>August 2021 – February 2024</strong></p>
+                            <ul>
+                                <li>Developed and maintained scalable web applications using <strong>.NET (C#) Web
+                                        Forms</strong> and MS SQL Server.</li>
+                                <li>Built <strong>RESTful APIs</strong> and backend services to integrate with
+                                    third-party
+                                    platforms.</li>
+                                <li>Optimized SQL queries and database performance, reducing query execution time by
+                                    20%.
+                                </li>
+                                <li>Designed and implemented ETL processes for automated reporting and data pipelines.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
-                <!-- HYPERLOCAL Project -->
-                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-box">
-                        <h3>HYPERLOCAL</h3>
-                        <p><strong>Technologies Used:</strong> C# (.NET) Web Forms, SQL Server</p>
-                        <p>A system designed for fast and efficient store and rider onboarding, incorporating electronic background verification (e-BGV). The onboarding modules enable businesses to quickly integrate new stores and riders, while e-BGV simplifies the background check process for riders and employees, ensuring reliability and safety.</p>
-                        <p><strong>Challenges:</strong> Streamlined the onboarding process and ensured secure background verification.</p>
-                        <p><strong>Solutions:</strong> Implemented a scalable architecture and integrated secure verification protocols.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="project-section" aria-label="Key Projects Section">
+            <div class="container">
+                <h2 class="section-title">Key Projects</h2>
+                <div class="row">
+                    <!-- Pan-India Payroll Module -->
+                    <div class="col-lg-6 mb-4" data-aos="fade-up">
+                        <div class="project-box">
+                            <div class="project-icon">
+                                <i class="fas fa-money-check-alt"></i>
+                            </div>
+                            <h3>Pan-India Payroll Module</h3>
+                            <p class="tech-stack">
+                                <span class="badge">.NET (C#)</span>
+                                <span class="badge">MS SQL</span>
+                                <span class="badge">T-SQL</span>
+                            </p>
+                            <p>
+                                Designed and implemented payroll management for
+                                <strong>40,000+ delivery agents</strong>
+                                (XpressBees & Blinkit), optimizing SQL queries and improving data processing speed by
+                                20%.
+                                Built automated compliance reporting, reducing manual errors by 30%.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Store & Gig Onboarding -->
+                    <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-box">
+                            <div class="project-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h3>Store & Gig Onboarding Platform</h3>
+                            <p class="tech-stack">
+                                <span class="badge">.NET (C#)</span>
+                                <span class="badge">Node.js</span>
+                                <span class="badge">MS SQL</span>
+                            </p>
+                            <p>
+                                Developed high-performance onboarding and e-BGV platforms for
+                                <strong>XpressBees, Blinkit, Swiggy, Zomato, and Lenskart</strong>,
+                                increasing onboarding efficiency by 35% through modular architecture
+                                and secure verification protocols.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- HRMS Project -->
+                    <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-box">
+                            <div class="project-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <h3>HRMS (HR Management System)</h3>
+                            <p class="tech-stack">
+                                <span class="badge">.NET (C#)</span>
+                                <span class="badge">MS SQL</span>
+                                <span class="badge">T-SQL</span>
+                            </p>
+                            <p>
+                                Automated attendance, payroll, and task management workflows,
+                                reducing manual effort by 40%. Integrated predictive analytics
+                                to improve HR decision-making by 15%.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="footer">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 contact-item" data-aos="fade-up">
-                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                    <p><a href="mailto:dasdebdatta4@gmail.com">dasdebdatta4@gmail.com</a></p>
+        <!-- Contact Section -->
+        <section id="contact" class="footer contact-section" aria-label="Contact Section">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="row">
+                    <!-- Email -->
+                    <div class="col-md-4 mb-4" data-aos="fade-up">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                            <p><a href="mailto:dasdebdatta4@gmail.com"
+                                    aria-label="Send email to dasdebdatta4@gmail.com">Email Me</a></p>
+                        </div>
+                    </div>
+                    <!-- Phone -->
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                            <p><a href="tel:+918800768701"
+                                    aria-label="Call Debdatta Das on phone number +91 8800768701">Call Me</a></p>
+                        </div>
+                    </div>
+                    <!-- LinkedIn -->
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <p><a href="https://www.linkedin.com/in/debdattadas/" target="_blank"
+                                    aria-label="Visit my LinkedIn profile">Connect on LinkedIn</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <p><a href="https://github.com/DebdattaDas" target="_blank"
+                                    aria-label="Visit my GitHub profile">Explore My GitHub</a></p>
+                        </div>
+                    </div>
+                    <!-- X -->
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-x"></i></div>
+                            <p><a href="https://x.com/das_debdatta28" target="_blank"
+                                    aria-label="Visit my X (Twitter) profile">Follow on X</a></p>
+                        </div>
+                    </div>
+                    <!-- Instagram -->
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <p><a href="https://www.instagram.com/das_debdatta28/" target="_blank"
+                                    aria-label="Visit my Instagram profile">Follow on Instagram</a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                    <p><a href="tel:+918800768701">+91 88007 68701</a></p>
-                </div>
-                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fa-brands fa-linkedin fa-2x" aria-hidden="true"></i>
-                    <p><a href="https://www.linkedin.com/in/debdattadas/" target="_blank" aria-label="View My LinkedIn Profile">View My LinkedIn Profile</a></p>
-                </div>
-                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fa-brands fa-x fa-2x" aria-hidden="true"></i>
-                    <p><a href="https://x.com/das_debdatta28" target="_blank" aria-label="Follow me on X">Follow me on X</a></p>
-                </div>
-                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fa-brands fa-github fa-2x" aria-hidden="true"></i>
-                    <p><a href="https://github.com/DebdattaDas" target="_blank" aria-label="View my GitHub Profile">View my GitHub Profile</a></p>
-                </div>
-                <div class="col-md-4 contact-item" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fa-brands fa-instagram fa-2x" aria-hidden="true"></i>
-                    <p><a href="https://www.instagram.com/das_debdatta28/" target="_blank" aria-label="Follow on Instagram">Follow on Instagram</a></p>
-                </div>            
             </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo" aria-label="Website Footer">
+        <p>&copy; 2025 Debdatta Das. All rights reserved.</p>
+        <a href="#top" id="backToTop" aria-label="Back to Top" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+
 </body>
 
 </html>
